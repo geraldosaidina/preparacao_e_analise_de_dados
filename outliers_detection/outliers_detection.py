@@ -1,7 +1,9 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
 
-df = pd.read_csv('transaccoes.csv')
+csv_path = Path(__file__).resolve().parent / "transaccoes.csv"
+df = pd.read_csv(csv_path)
 
 # 1. Remover valores impossiveis (negativos)
 df = df[df['valor'] >= 0]

@@ -3,8 +3,10 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
+from pathlib import Path
 
-df = pd.read_csv('credito_knn.csv')
+csv_path = Path(__file__).resolve().parent / "credito_knn.csv"
+df = pd.read_csv(csv_path)
 
 X = df[['idade', 'salario', 'divida']]
 y = df['risco']
