@@ -6,7 +6,6 @@ from sklearn.metrics import accuracy_score, classification_report
 
 # 1. Criar dados fictícios
 # [glicose, imc]
-
 X = np.array([
     [85, 22], [90, 24], [95, 25], [100, 26], [105, 27],
     [110, 28], [115, 29], [120, 24], [125, 26], [130, 28],
